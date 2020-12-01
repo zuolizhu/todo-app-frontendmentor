@@ -3,6 +3,7 @@ import create from 'zustand'
 const useStore = create((set) => ({
   filter: '',
   todos: [],
+  theme: 'dark',
   setFilter: (filter) =>
     set((state) => ({
       ...state,
@@ -12,6 +13,11 @@ const useStore = create((set) => ({
     set((state) => ({
       ...state,
       todos
+    })),
+  setTheme: (theme) =>
+    set((state) => ({
+      ...state,
+      theme
     }))
 }))
 
