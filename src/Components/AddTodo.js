@@ -1,5 +1,6 @@
 import useStore from '../store'
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import useFetch from '../Hooks/useFetch'
 
 export default function AddTodo() {
@@ -28,7 +29,7 @@ export default function AddTodo() {
         if (data) {
           setTodos([...todos, {
             userId: 1,
-            id: todos.length + 1,
+            id: uuidv4(),
             title: newTodo,
             completed: false
           }])
