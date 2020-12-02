@@ -37,6 +37,7 @@
   --bg-component: var(--color-white);
   --color-circle: var(--color-gray-92);
   --component-shadow: 0 35px 50px -15px rgba(194,195,214,0.50);
+  --color-todo-border: var(--color-gray-92);
 }
 
 .dark {
@@ -50,6 +51,7 @@
   --bg-component: var(--color-charcoal-19);
   --color-circle: var(--color-charcoal-26);
   --component-shadow: 0 35px 50px -15px rgba(0,0,0,0.50);
+  --color-todo-border: var(--color-charcoal-26);
 }
 
 // reset

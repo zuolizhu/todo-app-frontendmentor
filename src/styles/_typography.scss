@@ -8,3 +8,21 @@
     outline: var(--outline);
   }
 }
+
+.t-todo {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  letter-spacing: -.17px;
+  color: var(--color-text-1);
+  font-weight: var(--weight-regular);
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    letter-spacing: -.25px;
+  }
+}
+
+.todo.completed .t-todo {
+  color: var(--color-text-3);
+  text-decoration: line-through;
+}

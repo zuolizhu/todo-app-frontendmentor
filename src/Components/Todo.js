@@ -9,7 +9,7 @@ export default function Todo({ todo }) {
     setTodos(todos.filter(oldTodo => oldTodo.id !== targetTodoId))
   }
   return (
-    <div>
+    <div className="t-todo">
       {todo.title}
       <button onClick={handleRemoveTodo}>X</button>
     </div>
