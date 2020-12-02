@@ -1,0 +1,29 @@
+.cool-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 1.2rem;
+  background-color: var(--color-circle);
+  transition: var(--transition) background;
+  @media (min-width: 768px) {
+    margin-right: 2.4rem;
+  }
+  &::before {
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-component);
+    transition: var(--transition) background-color;
+  }
+
+  &.focusing {
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+  }
+}

@@ -6,6 +6,7 @@ import useFetch from '../Hooks/useFetch'
 export default function AddTodo() {
   const [newTodo, setNewTodo] = useState('')
   const todos = useStore((state) => state.todos)
+  const [isFocus, setIsFocus] = useState(false)
   const [isAdding, setIsAdding] = useState(false)
   const setTodos = useStore((state) => state.setTodos)
   const { post } = useFetch('http://my-json-server.typicode.com/zuolizhu/json-server-data/')
@@ -13,6 +14,10 @@ export default function AddTodo() {
   const handleNewTodoChange = (event) => {
     setNewTodo(event.target.value)
   }
+
+  const handleOnInputFocus = () => setIsFocus(true)
+  
+  const handleOnInputBlur = () => setIsFocus(false)
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
@@ -46,7 +51,7 @@ export default function AddTodo() {
 
   return (
     <div className="input-box">
-      <div className="input-box__circle"></div>
+      <div className={`cool-circle${isFocus ? ' focusing' : ''}`}></div>
       <label className="sr-only" htmlFor="newTodo">add new todo</label>
       <input 
         type="text" 
@@ -55,7 +60,9 @@ export default function AddTodo() {
         value={newTodo}
         disabled={isAdding}
         onKeyDown={handleKeyDown}
+        onBlur={handleOnInputBlur}
         className="input-box__input"
+        onFocus={handleOnInputFocus}
         onChange={handleNewTodoChange}
         placeholder="Create a new todo…" 
       />

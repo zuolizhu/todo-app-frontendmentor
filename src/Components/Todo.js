@@ -10,8 +10,11 @@ export default function Todo({ todo }) {
   }
   return (
     <div className="t-todo">
-      {todo.title}
-      <button onClick={handleRemoveTodo}>X</button>
+      <button></button>
+      <span>{todo.title}</span>
+      <button className="btn btn-remove" onClick={handleRemoveTodo}>
+        <span className="sr-only">remove todo</span>
+      </button>
     </div>
   )
 }
