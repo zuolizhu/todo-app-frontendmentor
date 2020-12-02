@@ -46,6 +46,7 @@ export default function AddTodo() {
 
   return (
     <div className="input-box">
+      <div className="input-box__circle"></div>
       <label className="sr-only" htmlFor="newTodo">add new todo</label>
       <input 
         type="text" 
@@ -54,6 +55,7 @@ export default function AddTodo() {
         value={newTodo}
         disabled={isAdding}
         onKeyDown={handleKeyDown}
+        className="input-box__input"
         onChange={handleNewTodoChange}
         placeholder="Create a new todo…" 
       />

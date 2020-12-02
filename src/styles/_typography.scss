@@ -1,0 +1,10 @@
+.t-branding {
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 1.5rem;
+  color: var(--color-white);
+  font-weight: var(--weight-bold);
+  &:focus {
+    outline: var(--outline);
+  }
+}

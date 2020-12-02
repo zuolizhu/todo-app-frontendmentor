@@ -1,0 +1,42 @@
+.header {
+  height: 20rem;
+  padding-top: 4.8rem;
+  padding-left: 2.6rem;
+  padding-right: 2.4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--bg-img-mobile);
+  transition: var(--transition) background;
+  @media (min-width: 768px) {
+    height: 30rem;
+    padding-top: 7rem;
+    background-image: var(--bg-img-desktop);
+  }
+
+  .container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 54.1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .app-logo {
+    cursor: pointer;
+  }
+
+  .toggler {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    @media (min-width: 500px) {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

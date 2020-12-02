@@ -5,13 +5,25 @@
   --color-gray-35: #494C6B;
   --color-gray-61: #9495A5;
   --color-gray-84: #D1D2DA;
+  --color-gray-92: #E3E4F1;
   --color-gray-98: #FAFAFA;
   // Colors on dark theme
   --color-blue-85: #C8CBE7;
   --color-charcoal-11: #171823;
   --color-charcoal-19: #25273D;
+  --color-charcoal-26: #393A4B;
   --color-charcoal-35: #4D5067;
   --color-charcoal-43: #5B5E7E;
+
+  --color-blue-61: #3A7CFD;
+
+  // Font Weights
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  // Design Elements
+  --outline: 2px dotted var(--color-blue-61);
+  --transition: 300ms ease-in-out;
 }
 
 .light {
@@ -23,6 +35,8 @@
   --color-text-3: var(--color-gray-84);
   --bg-app: var(--color-gray-98);
   --bg-component: var(--color-white);
+  --color-circle: var(--color-gray-92);
+  --component-shadow: 0 35px 50px -15px rgba(194,195,214,0.50);
 }
 
 .dark {
@@ -34,6 +48,8 @@
   --color-text-3: var(--color-charcoal-35);
   --bg-app: var(--color-charcoal-11);
   --bg-component: var(--color-charcoal-19);
+  --color-circle: var(--color-charcoal-26);
+  --component-shadow: 0 35px 50px -15px rgba(0,0,0,0.50);
 }
 
 // reset
@@ -71,6 +87,9 @@ button {
   border: none;
   background: none;
   font-family: 'Josefin Sans', sans-serif;
+  &:focus {
+    outline: var(--outline);
+  }
 }
 
 input {
@@ -79,6 +98,10 @@ input {
   &:disabled {
     cursor: wait;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 .sr-only {
@@ -90,4 +113,9 @@ input {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
+.App {
+  background-color: var(--bg-app);
+  transition: var(--transition) background-color;
 }
