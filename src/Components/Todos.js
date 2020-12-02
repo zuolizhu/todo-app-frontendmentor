@@ -2,10 +2,10 @@ import Todo from './Todo'
 import Loader from './Loader'
 import useStore from '../store'
 import { useEffect } from 'react'
+import TodosFilter from './TodosFilter'
 import useFetch from '../Hooks/useFetch'
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 
-const grid = 8;
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
   userSelect: "none",
@@ -50,7 +50,7 @@ export default function Todos() {
   if (loading) return <Loader />
 
   return (
-    <>
+    <div className="todos-wrap">
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
@@ -82,6 +82,7 @@ export default function Todos() {
           )}
         </Droppable>
       </DragDropContext>
-    </>
+      <TodosFilter />
+    </div>
   )
 }

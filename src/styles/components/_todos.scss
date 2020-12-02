@@ -1,21 +1,23 @@
-.todos {
+.todos-wrap {
   width: 87.2%;
   margin: 0 auto;
   max-width: 54rem;
-  border-radius: .5rem .5rem 0 0;
+  border-radius: .5rem;
   box-shadow: var(--component-shadow);
   background-color: var(--bg-component);
-
-  .todo {
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid var(--color-todo-border);
-    @media (min-width: 768px) {
-      padding: 1.9rem 2.4rem;
-    }
-
-    &:focus {
-      outline: var(--outline);
-      border-color: transparent;
+  
+  .todos {
+    .todo {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--color-todo-border);
+      @media (min-width: 768px) {
+        padding: 1.9rem 2.4rem;
+      }
+  
+      &:focus {
+        outline: var(--outline);
+        border-color: transparent;
+      }
     }
   }
 }
