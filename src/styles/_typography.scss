@@ -54,3 +54,17 @@
     letter-spacing: -.19px;
   }
 }
+
+.t-empty {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 2rem;
+  letter-spacing: -.17px;
+  color: var(--color-text-1);
+  font-weight: var(--weight-regular);
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: -.25px;
+  }
+}
