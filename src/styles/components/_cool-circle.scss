@@ -7,6 +7,8 @@
   background-color: var(--color-circle);
   transition: var(--transition) background;
   @media (min-width: 768px) {
+    width: 2.4rem;
+    height: 2.4rem;
     margin-right: 2.4rem;
   }
   &::before {
@@ -20,10 +22,28 @@
     transform: translate(-50%, -50%);
     background-color: var(--bg-component);
     transition: var(--transition) background-color;
+    @media (min-width: 768px) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
   }
 
-  &.focusing {
+  &.focusing,
+  &:hover {
     background-color: transparent;
     background-image: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
   }
+
+  &--completed {
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    &::before {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-image: url(../../Assets/icon-check.svg);
+    }
+  }
+
+  
 }

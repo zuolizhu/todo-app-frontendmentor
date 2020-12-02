@@ -1,14 +1,17 @@
 .todos-wrap {
   width: 87.2%;
   margin: 0 auto;
+  overflow: hidden;
   max-width: 54rem;
   border-radius: .5rem;
   box-shadow: var(--component-shadow);
   background-color: var(--bg-component);
+  transition: var(--transition) background-color;
   
   .todos {
     .todo {
       padding: 1.5rem 2rem;
+      background-color: var(--bg-component);
       border-bottom: 1px solid var(--color-todo-border);
       @media (min-width: 768px) {
         padding: 1.9rem 2.4rem;
@@ -17,6 +20,11 @@
       &:focus {
         outline: var(--outline);
         border-color: transparent;
+      }
+
+      .todo-item {
+        display: flex;
+        align-items: center;
       }
     }
   }

@@ -2,7 +2,7 @@
 import Loader from './Loader'
 import useStore from '../store'
 import InnerList from './InnerList'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import TodosFilter from './TodosFilter'
 import useFetch from '../Hooks/useFetch'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
@@ -11,13 +11,16 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 
 export default function Todos() {
   const { get, loading } = useFetch('http://my-json-server.typicode.com/zuolizhu/json-server-data/')
+  const [isError, setIsError] = useState(false)
   const todos = useStore((state) => state.todos)
   const setTodos = useStore((state) => state.setTodos)
-
   useEffect(() => {
     get('todos')
     .then((data) => setTodos(data))
-    .catch((error) => console.error(error))
+    .catch((error) => {
+      console.log(error)
+      setIsError(true)
+    })
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -44,6 +47,8 @@ export default function Todos() {
   }
 
   if (loading) return <Loader />
+  if (isError) return 'Error on fetching'
+  if (todos.length === 0) return 'Todo list is empty'
 
   return (
     <div className="todos-wrap">
