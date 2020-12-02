@@ -8,6 +8,8 @@ import FloatingRadioFilter from './Components/FloatingRadioFilter'
 
 function App() {
   const theme = useStore((state) => state.theme)
+  const todos = useStore((state) => state.todos)
+
   const AppClasses = clsx({
     'App': true,
     'dark': theme === 'dark',
@@ -18,7 +20,7 @@ function App() {
       <Header />
       <AddTodo />
       <Todos />
-      <FloatingRadioFilter />
+      {todos.length > 0 && <FloatingRadioFilter />}
     </div>
   )
 }

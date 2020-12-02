@@ -9,7 +9,18 @@
 }
 
 .floating-radios {
-  
+  width: 87.2%;
+  display: flex;
+  max-width: 54rem;
+  padding-top: 1.5rem;
+  border-radius: .5rem;
+  margin: 1.6rem auto 0;
+  padding-bottom: 1.8rem;
+  justify-content: center;
+  box-shadow: var(--component-shadow);
+  background-color: var(--bg-component);
+  transition: var(--transition) background-color, var(--transition) box-shadow;
+
   @media (min-width: 768px) {
     display: none;
   }

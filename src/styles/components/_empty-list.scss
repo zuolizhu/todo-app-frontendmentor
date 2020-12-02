@@ -11,4 +11,9 @@
   @media (min-width: 768px) {
     padding: 2rem 2.4rem;
   }
+
+  &--loading {
+    position: relative;
+    padding-bottom: 6rem;
+  }
 }
