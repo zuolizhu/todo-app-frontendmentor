@@ -9,7 +9,7 @@ export default function AddTodo() {
   const [isFocus, setIsFocus] = useState(false)
   const [isAdding, setIsAdding] = useState(false)
   const setTodos = useStore((state) => state.setTodos)
-  const { post } = useFetch('http://my-json-server.typicode.com/zuolizhu/json-server-data/')
+  const { post } = useFetch('https://my-json-server.typicode.com/zuolizhu/json-server-data/')
 
   const handleNewTodoChange = (event) => {
     setNewTodo(event.target.value)

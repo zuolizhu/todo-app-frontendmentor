@@ -10,7 +10,7 @@ import EmptyListHandler from './EmptyListHandler'
 
 
 export default function Todos() {
-  const { get, loading } = useFetch('http://my-json-server.typicode.com/zuolizhu/json-server-data/')
+  const { get, loading } = useFetch('https://my-json-server.typicode.com/zuolizhu/json-server-data/')
   const [isError, setIsError] = useState(false)
   const todos = useStore((state) => state.todos)
   const setTodos = useStore((state) => state.setTodos)
