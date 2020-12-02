@@ -1,5 +1,39 @@
 :root {
+  // Colors on light theme
+  // Higher number means higher lightness
   --color-white: #fff;
+  --color-gray-35: #494C6B;
+  --color-gray-61: #9495A5;
+  --color-gray-84: #D1D2DA;
+  --color-gray-98: #FAFAFA;
+  // Colors on dark theme
+  --color-blue-85: #C8CBE7;
+  --color-charcoal-11: #171823;
+  --color-charcoal-19: #25273D;
+  --color-charcoal-35: #4D5067;
+  --color-charcoal-43: #5B5E7E;
+}
+
+.light {
+  --bg-img-mobile: url(../Assets/bg-mobile-light.jpg);
+  --bg-img-desktop: url(../Assets/bg-desktop-light.jpg);
+  // dark: 1, mid: 2, light: 3
+  --color-text-1: var(--color-gray-35);
+  --color-text-2: var(--color-gray-61);
+  --color-text-3: var(--color-gray-84);
+  --bg-app: var(--color-gray-98);
+  --bg-component: var(--color-white);
+}
+
+.dark {
+  --bg-img-mobile: url(../Assets/bg-mobile-dark.jpg);
+  --bg-img-desktop: url(../Assets/bg-desktop-dark.jpg);
+  // white: 1, mid: 2, dark: 3
+  --color-text-1: var(--color-blue-85);
+  --color-text-2: var(--color-charcoal-43);
+  --color-text-3: var(--color-charcoal-35);
+  --bg-app: var(--color-charcoal-11);
+  --bg-component: var(--color-charcoal-19);
 }
 
 // reset

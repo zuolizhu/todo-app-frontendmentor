@@ -9,7 +9,8 @@ function App() {
   const theme = useStore((state) => state.theme)
   const AppClasses = clsx({
     'App': true,
-    'dark': theme === 'dark'
+    'dark': theme === 'dark',
+    'light': theme !== 'dark'
   })
   return (
     <div className={AppClasses}>
