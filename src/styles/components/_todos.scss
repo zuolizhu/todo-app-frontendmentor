@@ -15,7 +15,13 @@
       border-bottom: 1px solid var(--color-todo-border);
       transition: var(--transition) background-color, var(--transition) border-color;
       @media (min-width: 768px) {
-        padding: 1.9rem 2.4rem;
+        padding: 1.95rem 2.4rem 2rem;
+        &:hover {
+          .btn--remove {
+            opacity: 1;
+          }
+        }
+        
       }
   
       &:focus {
@@ -34,11 +40,17 @@
     display: flex;
     padding: 1.5rem 2rem 2.2rem;
     justify-content: space-between;
+    @media (min-width: 768px) {
+      padding: 1.6rem 2.4rem 1.9rem;
+      justify-content: flex-start;
+    }
 
     .radios {
       display: none;
       @media (min-width: 768px) {
         display: flex;
+        margin-right: auto;
+        margin-left: 9.6rem;
       }
     }
   }
