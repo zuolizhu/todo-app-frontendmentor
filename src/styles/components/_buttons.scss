@@ -5,3 +5,23 @@
     color: var(--color-text-1);
   }
 }
+
+.btn--remove {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--bg-img-cross);
+  transition: var(--transition) background-image, var(--transition) transform;
+  @media (min-width: 768px) {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &:hover {
+    transform: scale(1.25);
+    background-image: url(../../Assets/icon-cross-hover.svg);
+  }
+}
