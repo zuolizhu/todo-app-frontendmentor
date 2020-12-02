@@ -1,0 +1,21 @@
+.header {
+  height: 20rem;
+  padding-top: 4.8rem;
+  padding-left: 2.6rem;
+  padding-right: 2.4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--bg-img-mobile);
+  @media (min-width: 768px) {
+    background-image: var(--bg-img-desktop);
+  }
+
+  .container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 54.1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
