@@ -1,0 +1,7 @@
+.notification {
+  margin-top: 4rem;
+  text-align: center;
+  @media (min-width: 768px) {
+    margin-top: 4.9rem;
+  }
+}
