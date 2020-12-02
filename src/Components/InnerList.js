@@ -1,5 +1,6 @@
 import React from 'react'
 import Todo from './Todo'
+import useStore from '../store'
 import { Draggable } from 'react-beautiful-dnd'
 
 const getItemStyle = (isDragging, draggableStyle) => ({
@@ -9,7 +10,17 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 });
 
 const InnerList = React.memo(function InnerList({ todos }) {
-  return todos.map((todo, index) => (
+  const filter = useStore((state) => state.filter)
+  
+  const todoFilter = (todo) => {
+    if (filter === 'active') return !todo.completed
+    if (filter === 'completed') return todo.completed
+    if (filter === '') return todo
+  }
+
+  return todos
+  .filter(todoFilter)
+  .map((todo, index) => (
     <Draggable key={todo.id} draggableId={`todo-${todo.id}`} index={index}>
       {(provided, snapshot) => (
         <div

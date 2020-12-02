@@ -4,6 +4,7 @@ import useStore from './store'
 import Todos from './Components/Todos'
 import Header from './Components/Header'
 import AddTodo from './Components/AddTodo'
+import FloatingRadioFilter from './Components/FloatingRadioFilter'
 
 function App() {
   const theme = useStore((state) => state.theme)
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <AddTodo />
       <Todos />
+      <FloatingRadioFilter />
     </div>
   )
 }

@@ -1,4 +1,3 @@
-
 import Loader from './Loader'
 import useStore from '../store'
 import InnerList from './InnerList'

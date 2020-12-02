@@ -21,7 +21,7 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg-component);
-    transition: var(--transition) background-color;
+    transition: var(--transition) background-color, var(--transition) background-image;
     @media (min-width: 768px) {
       width: 2.2rem;
       height: 2.2rem;
@@ -47,6 +47,4 @@
       background-image: url(../../Assets/icon-check.svg);
     }
   }
-
-  
 }

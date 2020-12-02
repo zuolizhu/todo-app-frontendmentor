@@ -119,6 +119,9 @@ a {
 }
 
 .App {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 12.6rem;
   background-color: var(--bg-app);
   transition: var(--transition) background-color;
 }

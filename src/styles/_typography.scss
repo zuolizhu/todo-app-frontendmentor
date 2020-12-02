@@ -26,3 +26,18 @@
   color: var(--color-text-3);
   text-decoration: line-through;
 }
+
+.t-radio-label {
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: var(--color-text-2);
+  font-weight: var(--weight-bold);
+  transition: var(--transition) color;
+  &:hover {
+    color: var(--color-text-1);
+  }
+  &.checked {
+    color: var(--color-blue-61);
+  }
+}

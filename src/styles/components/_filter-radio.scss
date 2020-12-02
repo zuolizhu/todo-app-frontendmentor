@@ -1,0 +1,12 @@
+.radios {
+  display: flex;
+  width: 16.6rem;
+}
+
+.floating-radios {
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
