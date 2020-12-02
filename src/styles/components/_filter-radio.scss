@@ -1,6 +1,11 @@
 .radios {
   display: flex;
   width: 16.6rem;
+  align-items: center;
+  .radio-input:nth-child(2) {
+    margin-left: 1.9rem;
+    margin-right: 1.8rem;
+  }
 }
 
 .floating-radios {

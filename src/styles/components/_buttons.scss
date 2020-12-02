@@ -1,0 +1,7 @@
+// Bad organized btn components
+.btn--clear-completed {
+  transition: var(--transition) color;
+  &:hover {
+    color: var(--color-text-1);
+  }
+}

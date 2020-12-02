@@ -41,3 +41,16 @@
     color: var(--color-blue-61);
   }
 }
+
+.t-status {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  letter-spacing: -.17px;
+  color: var(--color-text-2);
+  font-weight: var(--weight-regular);
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    letter-spacing: -.19px;
+  }
+}

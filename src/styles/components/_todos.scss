@@ -29,4 +29,17 @@
       }
     }
   }
+
+  .todos-filter {
+    display: flex;
+    padding: 1.5rem 2rem 2.2rem;
+    justify-content: space-between;
+
+    .radios {
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+  }
 }
