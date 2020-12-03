@@ -24,11 +24,11 @@ export default function Todo({ todo }) {
       <button
         onClick={handleCompleteClick}
         className={`btn cool-circle${todo.completed ? ' cool-circle--completed' : ''}`}>
-          <span className="sr-only">complete todo</span>
+          <p className="sr-only">complete todo</p>
         </button>
-      <span>{todo.title}</span>
+      <p>{todo.title}</p>
       <button className="btn btn--remove" onClick={handleRemoveTodo}>
-        <span className="sr-only">remove todo</span>
+        <p className="sr-only">remove todo</p>
       </button>
     </div>
   )
