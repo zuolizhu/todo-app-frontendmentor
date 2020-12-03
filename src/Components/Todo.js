@@ -23,12 +23,13 @@ export default function Todo({ todo }) {
     <div className="t-todo todo-item">
       <button
         onClick={handleCompleteClick}
+        aria-label="complete todo"
         className={`btn cool-circle${todo.completed ? ' cool-circle--completed' : ''}`}>
-          {/* <p className="sr-only">complete todo</p> */}
         </button>
       <p>{todo.title}</p>
-      <button className="btn btn--remove" onClick={handleRemoveTodo}>
-        {/* <p className="sr-only">remove todo</p> */}
+      <button
+        aria-label="complete todo"
+        className="btn btn--remove" onClick={handleRemoveTodo}>
       </button>
     </div>
   )
