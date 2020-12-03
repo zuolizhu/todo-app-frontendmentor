@@ -24,11 +24,13 @@ export default function Todo({ todo }) {
       <button
         onClick={handleCompleteClick}
         aria-label="complete todo"
+        aria-pressed="true"
         className={`btn cool-circle${todo.completed ? ' cool-circle--completed' : ''}`}>
         </button>
       <p>{todo.title}</p>
       <button
         aria-label="complete todo"
+        aria-pressed="true"
         className="btn btn--remove" onClick={handleRemoveTodo}>
       </button>
     </div>
