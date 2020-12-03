@@ -16,11 +16,6 @@
       transition: var(--transition) background-color, var(--transition) border-color;
       @media (min-width: 768px) {
         padding: 1.95rem 2.4rem 2rem;
-        &:hover {
-          .btn--remove {
-            opacity: 1;
-          }
-        }
         
       }
   

@@ -14,11 +14,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--bg-img-cross);
-  transition: var(--transition) background-image, var(--transition) transform, var(--transition) opacity;
+  transition: var(--transition) background-image, var(--transition) transform;
   @media (min-width: 768px) {
     width: 1.8rem;
     height: 1.8rem;
-    opacity: 0;
   }
 
   &:hover {
